@@ -1,0 +1,27 @@
+<div class="ui internally celled grid">
+    <div class="row">
+        <div class="ui vertical menu inverted teal three wide column">
+        <div class="horizontal list" *ngIf='userObservable | async as user'>
+            <div class="item">
+            <img [src]="user.photoURL" class="ui circular image">
+            <div class="content ui segment">
+                <div class="ui sub header centered ">{{ user.displayName }}</div>
+                <!-- <div class="ui sub header centered">{{ user.email }}</div> -->
+            </div>
+            </div>
+        </div>
+        <div class="item ui very relaxed list">
+            <div class="menu item" *ngFor="let item of navArr | async" [routerLink]=[item.url] routerLinkActive='active'>
+            <img class="ui avatar image" [src]="" alt="">
+            <div class="content">
+                <a class="ui header">{{ item.title }}</a>
+            </div>
+            </div>
+            <div class="ui buttons">
+            <button class="ui black button" (click)='login()'>Login</button>
+            <button class="ui button" (click)='logout()'>Logout</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

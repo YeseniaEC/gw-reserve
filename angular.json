@@ -29,11 +29,13 @@
               }
             ],
             "styles": [
-              {
-                "input": "src/styles.scss"
-              }
+              
+                "src/styles.scss"                
+              
             ],
-            "scripts": []
+            "scripts": [
+                
+            ]
           },
           "configurations": {
             "production": {
